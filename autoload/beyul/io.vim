@@ -20,7 +20,7 @@ function! beyul#io#Write(path)
         " on this scheme, we should probably compress things so the collection
         " of files is protected and the "document" is self contained.
         if line('$') > s:final_line
-            let new_fname = fnamemodify(a:path, ":p:r").".".localtime().".part"
+            let new_fname = fnamemodify(a:path, ":t:r").".".localtime().".part"
             silent exe s:final_line+1.",".line('$')." w ".new_fname
             let fl = readfile(a:path)
             let fl = add(fl, new_fname)
