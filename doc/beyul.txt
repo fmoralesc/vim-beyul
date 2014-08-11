@@ -1,0 +1,17 @@
+*vim-beyul*
+
+
+                                  VIM-BEYUL
+
+Super experimental hypertext mode for vim, inspired by Ted Nelson's Xanadu
+(http://en.wikipedia.org/wiki/Project_Xanadu, http://xanadu.com).
+
+- IDEA                                                        *vim-beyul-idea*
+
+The beyul fileformat describes how to build up a document. Vim interprets this
+description to present the document (on `BufReadCmd`). On writes
+(`BufWriteCmd`), the description is updated. If the description sources from
+external documents, changes on those will change the document. 
+
+
+ vim: set ft=help :
